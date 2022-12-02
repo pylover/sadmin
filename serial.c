@@ -62,7 +62,7 @@ int _baudrate(int b) {
 
 int serial_open(const char *name) {
     struct termios options;
-    struct epoll_event ev;
+
     int baud = 115200;
     int baudrate = _baudrate(baud);
     if (baudrate == -1) {

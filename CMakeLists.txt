@@ -15,10 +15,12 @@ include_directories(
 
 
 add_library(ev OBJECT ev.c)
+add_library(stdin OBJECT stdin.c)
 add_library(serial OBJECT serial.c)
 
 add_executable(sadmin 
     $<TARGET_OBJECTS:ev> 
+    $<TARGET_OBJECTS:stdin> 
     $<TARGET_OBJECTS:serial> 
     main.c
 )

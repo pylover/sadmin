@@ -1,1 +1,2 @@
 - Get baudrate from settings
+- Backup and restore ttystate on exit

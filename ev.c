@@ -4,7 +4,7 @@
 #include <sys/epoll.h>
 
 
-int evfd;
+static int evfd;
 
 
 int 
@@ -30,4 +30,10 @@ ev_add(int fd, int op) {
         return -1;
     }
     return 0;
+}
+
+
+int
+ev_wait(struct epoll_event *events, int maxevents) {
+    return epoll_wait(evfd, events, maxevents, -1);
 }
