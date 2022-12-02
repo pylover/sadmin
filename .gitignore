@@ -1,0 +1,6 @@
+
+# Vim
+.*.sw[op]
+
+# Project Specific
+build
